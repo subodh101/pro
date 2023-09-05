@@ -1,4 +1,10 @@
 site_name: Subodh Pushkar
-site_url: https://subodhpushkar.com/profile/
+site_url: https://pro.subodh101.com/timeline/
 site_author: Subodh Pushkar
 docs_dir: docs
+repo_name: subodh101/timeline
+repo_url: https://github.com/subodh101/timeline
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences

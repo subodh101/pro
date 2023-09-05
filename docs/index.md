@@ -1,4 +1,4 @@
-# Welcome to GitHub Pages
+# Timeline
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
