@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://subodhpushkar.com/profile/</loc>
-         <lastmod>2022-11-09</lastmod>
+         <loc>https://pro.subodh101.com/timeline/</loc>
+         <lastmod>2023-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://subodhpushkar.com/profile/test1/helloworld1/</loc>
-         <lastmod>2022-11-09</lastmod>
+         <loc>https://pro.subodh101.com/timeline/quicklinks/gcloud/</loc>
+         <lastmod>2023-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://subodhpushkar.com/profile/test2/helloworld2/</loc>
-         <lastmod>2022-11-09</lastmod>
+         <loc>https://pro.subodh101.com/timeline/test2/helloworld2/</loc>
+         <lastmod>2023-09-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
