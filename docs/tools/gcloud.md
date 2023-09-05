@@ -1,4 +1,4 @@
-# Google Cloud CLI
+# glcoud
 
 *Google Cloud Platform (GCP) provides a command-line interface called gcloud that allows you to manage various aspects of your GCP resources. Below are some common gcloud commands and their usage:*
 
