@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Subodh Pushkar">
-        <link rel="canonical" href="https://pro.subodh101.com/timeline/quicklinks/gcloud/">
+        <link rel="canonical" href="https://pro.subodh101.com/timeline/tools/kubectl/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Google Cloud CLI - Subodh Pushkar</title>
+        <title>kubectl - Subodh Pushkar</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -34,20 +34,15 @@
                                 <a href="../.." class="nav-link">Timeline</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Quicklinks <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Google Cloud CLI</a>
+    <a href="../gcloud/" class="dropdown-item">glcoud</a>
 </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Test2 <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../test2/helloworld2/" class="dropdown-item">Hello world 2</a>
+    <a href="./" class="dropdown-item active">kubectl</a>
 </li>
                                 </ul>
                             </li>
@@ -60,17 +55,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../.." class="nav-link">
+                                <a rel="prev" href="../gcloud/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../test2/helloworld2/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/subodh101/timeline/edit/master/docs/quicklinks/gcloud.md" class="nav-link">Edit on subodh101/timeline
+                                <a href="https://github.com/subodh101/timeline/edit/master/docs/tools/kubectl.md" class="nav-link">Edit on subodh101/timeline
                                     </a>
                             </li>
                     </ul>
@@ -91,7 +86,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#google-cloud-cli" class="nav-link">Google Cloud CLI</a>
+            <li class="nav-item" data-level="1"><a href="#kubectl" class="nav-link">kubectl</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -100,52 +95,60 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="google-cloud-cli">Google Cloud CLI</h1>
-<p><em>Google Cloud Platform (GCP) provides a command-line interface called gcloud that allows you to manage various aspects of your GCP resources. Below are some common gcloud commands and their usage:</em></p>
-<h3 id="authentication-and-configuration">Authentication and Configuration:</h3>
-<div class="highlight"><pre><span></span><code>gcloud auth login: Initiates the login process to authenticate with your Google Cloud account.
-gcloud config set project PROJECT_ID: Sets the default GCP project to be used.
-gcloud config set compute/zone ZONE: Sets the default compute zone.
-gcloud config set compute/region REGION: Sets the default compute region.
-gcloud auth application-default login: Authorizes application-default credentials for your local environment.
+<h1 id="kubectl">kubectl</h1>
+<p><em>Kubernetes (K8s) is a powerful container orchestration platform with a rich set of command-line tools (kubectl) for managing and interacting with Kubernetes clusters. Here are some common kubectl commands and their usage:</em></p>
+<h3 id="cluster-management">Cluster Management:</h3>
+<div class="highlight"><pre><span></span><code>kubectl cluster-info: Display cluster information, including the Kubernetes API server address.
+kubectl config get-contexts: List available Kubernetes contexts (clusters, users, and namespaces).
+kubectl config use-context CONTEXT_NAME: Set the active context to switch between clusters.
 </code></pre></div>
-<h3 id="compute-engine">Compute Engine:</h3>
-<div class="highlight"><pre><span></span><code>gcloud compute instances create INSTANCE_NAME: Creates a new Compute Engine virtual machine instance.
-gcloud compute instances list: Lists all Compute Engine instances in your project.
-gcloud compute ssh INSTANCE_NAME: SSH into a Compute Engine instance.
-gcloud compute firewall-rules create RULE_NAME --allow=PORT: Creates a firewall rule to allow traffic to a specific port.
+<h3 id="pod-management">Pod Management:</h3>
+<div class="highlight"><pre><span></span><code>kubectl get pods: List all pods in the current namespace.
+kubectl describe pod POD_NAME: Display detailed information about a pod.
+kubectl create -f POD_DEFINITION.yaml: Create a pod using a YAML or JSON file.
+kubectl delete pod POD_NAME: Delete a pod.
+kubectl exec -it POD_NAME -- COMMAND: Execute a command inside a running pod.
 </code></pre></div>
-<h3 id="storage-google-cloud-storage">Storage (Google Cloud Storage):</h3>
-<div class="highlight"><pre><span></span><code>gcloud storage buckets create BUCKET_NAME: Creates a new Cloud Storage bucket.
-gcloud storage buckets list: Lists all Cloud Storage buckets in your project.
-gcloud storage cp LOCAL_FILE gs://BUCKET_NAME/REMOTE_DIRECTORY: Copies a local file to a Cloud Storage bucket.
-gcloud storage ls gs://BUCKET_NAME: Lists objects in a Cloud Storage bucket.
+<h3 id="service-management">Service Management:</h3>
+<div class="highlight"><pre><span></span><code>kubectl get services: List all services in the current namespace.
+kubectl expose pod POD_NAME --port=SERVICE_PORT --type=SERVICE_TYPE: Create a service to expose a pod.
+kubectl delete service SERVICE_NAME: Delete a service.
 </code></pre></div>
-<h3 id="bigquery">BigQuery:</h3>
-<div class="highlight"><pre><span></span><code>gcloud bigquery datasets create DATASET_NAME: Creates a new BigQuery dataset.
-gcloud bigquery datasets list: Lists all BigQuery datasets in your project.
-bq query --nouse_legacy_sql &#39;SQL_QUERY&#39;: Runs a BigQuery SQL query from the command line.
+<h3 id="deployment-management">Deployment Management:</h3>
+<div class="highlight"><pre><span></span><code>kubectl get deployments: List all deployments in the current namespace.
+kubectl create deployment DEPLOYMENT_NAME --image=IMAGE_NAME: Create a deployment.
+kubectl rollout status deployment/DEPLOYMENT_NAME: Check the status of a deployment rollout.
+kubectl rollout undo deployment/DEPLOYMENT_NAME: Rollback a deployment to a previous version.
 </code></pre></div>
-<p>App Engine:</p>
-<div class="highlight"><pre><span></span><code>gcloud app create: Creates a new App Engine application.
-gcloud app deploy: Deploys the current directory as an App Engine application.
-gcloud app versions list: Lists all deployed versions of an App Engine application.
+<h3 id="configmaps-and-secrets">ConfigMaps and Secrets:</h3>
+<div class="highlight"><pre><span></span><code>kubectl create configmap CONFIGMAP_NAME --from-file=KEY=VALUE: Create a ConfigMap.
+kubectl create secret generic SECRET_NAME --from-literal=KEY=VALUE: Create a Secret.
+kubectl get configmap CONFIGMAP_NAME or kubectl get secret SECRET_NAME: List ConfigMaps or Secrets.
 </code></pre></div>
-<h3 id="kubernetes-engine-gke">Kubernetes Engine (GKE):</h3>
-<div class="highlight"><pre><span></span><code>gcloud container clusters create CLUSTER_NAME: Creates a new GKE cluster.
-gcloud container clusters get-credentials CLUSTER_NAME: Configures kubectl to use the GKE cluster.
-kubectl get pods: Lists Kubernetes pods in the current cluster.
+<h3 id="scaling-and-autoscaling">Scaling and Autoscaling:</h3>
+<div class="highlight"><pre><span></span><code>kubectl scale deployment DEPLOYMENT_NAME --replicas=NUM_REPLICAS: Scale a deployment manually.
+kubectl autoscale deployment DEPLOYMENT_NAME --min=MIN_REPLICAS --max=MAX_REPLICAS --cpu-percent=CPU_PERCENT: Set up Horizontal Pod Autoscaling (HPA).
 </code></pre></div>
-<h3 id="iam-and-permissions">IAM and Permissions:</h3>
-<div class="highlight"><pre><span></span><code>gcloud projects add-iam-policy-binding PROJECT_ID --member=USER_OR_GROUP --role=ROLE: Grants IAM permissions to a user or group on a project.
+<h3 id="namespace-management">Namespace Management:</h3>
+<div class="highlight"><pre><span></span><code>kubectl create namespace NAMESPACE_NAME: Create a new namespace.
+kubectl get namespaces: List all namespaces.
+kubectl config set-context --current --namespace=NAMESPACE_NAME: Change the default namespace for the current context.
 </code></pre></div>
-<h3 id="cloud-functions">Cloud Functions:</h3>
-<div class="highlight"><pre><span></span><code>gcloud functions deploy FUNCTION_NAME --runtime RUNTIME --trigger-http: Deploys a Cloud Function.
-gcloud functions list: Lists all Cloud Functions in your project.
+<h3 id="resource-descriptions">Resource Descriptions:</h3>
+<div class="highlight"><pre><span></span><code>kubectl get RESOURCE_NAME RESOURCE_IDENTIFIER: Get resource details (e.g., kubectl get pods my-pod).
+kubectl get RESOURCE_NAME --selector=LABEL_SELECTOR: Filter resources by labels.
+</code></pre></div>
+<h3 id="logs-and-events">Logs and Events:</h3>
+<div class="highlight"><pre><span></span><code>kubectl logs POD_NAME: View the logs of a specific pod.
+kubectl describe pod POD_NAME: View events and information about a pod.
+</code></pre></div>
+<h3 id="node-and-cluster-information">Node and Cluster Information:</h3>
+<div class="highlight"><pre><span></span><code>kubectl get nodes: List all nodes in the cluster.
+kubectl describe node NODE_NAME: View detailed information about a node.
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These are just a few examples of the many gcloud commands available for managing different Google Cloud services. You can get detailed help for any command by appending --help to it (e.g., gcloud compute instances create --help). Additionally, the GCP documentation provides comprehensive information on gcloud commands and their usage for each service.</p>
+<p>These are just a selection of commonly used kubectl commands. You can explore more commands and options by running kubectl --help or kubectl COMMAND --help for specific command details. The Kubernetes documentation is also a valuable resource for in-depth information on managing Kubernetes clusters and resources.</p>
 </div></div>
             </div>
         </div>

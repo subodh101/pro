@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Subodh Pushkar">
-        <link rel="canonical" href="https://pro.subodh101.com/timeline/test2/helloworld2/">
+        <link rel="canonical" href="https://pro.subodh101.com/timeline/tools/gcloud/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Hello world 2 - Subodh Pushkar</title>
+        <title>glcoud - Subodh Pushkar</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -33,21 +33,16 @@
                             <li class="navitem">
                                 <a href="../.." class="nav-link">Timeline</a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Quicklinks <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    
-<li>
-    <a href="../../quicklinks/gcloud/" class="dropdown-item">Google Cloud CLI</a>
-</li>
-                                </ul>
-                            </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Test2 <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Hello world 2</a>
+    <a href="./" class="dropdown-item active">glcoud</a>
+</li>
+                                    
+<li>
+    <a href="../kubectl/" class="dropdown-item">kubectl</a>
 </li>
                                 </ul>
                             </li>
@@ -60,17 +55,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../quicklinks/gcloud/" class="nav-link">
+                                <a rel="prev" href="../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../kubectl/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/subodh101/timeline/edit/master/docs/test2/helloworld2.md" class="nav-link">Edit on subodh101/timeline
+                                <a href="https://github.com/subodh101/timeline/edit/master/docs/tools/gcloud.md" class="nav-link">Edit on subodh101/timeline
                                     </a>
                             </li>
                     </ul>
@@ -91,7 +86,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#hello-world-2" class="nav-link">Hello world 2</a>
+            <li class="nav-item" data-level="1"><a href="#glcoud" class="nav-link">glcoud</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -100,7 +95,53 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="hello-world-2">Hello world 2</h1></div>
+<h1 id="glcoud">glcoud</h1>
+<p><em>Google Cloud Platform (GCP) provides a command-line interface called gcloud that allows you to manage various aspects of your GCP resources. Below are some common gcloud commands and their usage:</em></p>
+<h3 id="authentication-and-configuration">Authentication and Configuration:</h3>
+<div class="highlight"><pre><span></span><code>gcloud auth login: Initiates the login process to authenticate with your Google Cloud account.
+gcloud config set project PROJECT_ID: Sets the default GCP project to be used.
+gcloud config set compute/zone ZONE: Sets the default compute zone.
+gcloud config set compute/region REGION: Sets the default compute region.
+gcloud auth application-default login: Authorizes application-default credentials for your local environment.
+</code></pre></div>
+<h3 id="compute-engine">Compute Engine:</h3>
+<div class="highlight"><pre><span></span><code>gcloud compute instances create INSTANCE_NAME: Creates a new Compute Engine virtual machine instance.
+gcloud compute instances list: Lists all Compute Engine instances in your project.
+gcloud compute ssh INSTANCE_NAME: SSH into a Compute Engine instance.
+gcloud compute firewall-rules create RULE_NAME --allow=PORT: Creates a firewall rule to allow traffic to a specific port.
+</code></pre></div>
+<h3 id="storage-google-cloud-storage">Storage (Google Cloud Storage):</h3>
+<div class="highlight"><pre><span></span><code>gcloud storage buckets create BUCKET_NAME: Creates a new Cloud Storage bucket.
+gcloud storage buckets list: Lists all Cloud Storage buckets in your project.
+gcloud storage cp LOCAL_FILE gs://BUCKET_NAME/REMOTE_DIRECTORY: Copies a local file to a Cloud Storage bucket.
+gcloud storage ls gs://BUCKET_NAME: Lists objects in a Cloud Storage bucket.
+</code></pre></div>
+<h3 id="bigquery">BigQuery:</h3>
+<div class="highlight"><pre><span></span><code>gcloud bigquery datasets create DATASET_NAME: Creates a new BigQuery dataset.
+gcloud bigquery datasets list: Lists all BigQuery datasets in your project.
+bq query --nouse_legacy_sql &#39;SQL_QUERY&#39;: Runs a BigQuery SQL query from the command line.
+</code></pre></div>
+<p>App Engine:</p>
+<div class="highlight"><pre><span></span><code>gcloud app create: Creates a new App Engine application.
+gcloud app deploy: Deploys the current directory as an App Engine application.
+gcloud app versions list: Lists all deployed versions of an App Engine application.
+</code></pre></div>
+<h3 id="kubernetes-engine-gke">Kubernetes Engine (GKE):</h3>
+<div class="highlight"><pre><span></span><code>gcloud container clusters create CLUSTER_NAME: Creates a new GKE cluster.
+gcloud container clusters get-credentials CLUSTER_NAME: Configures kubectl to use the GKE cluster.
+kubectl get pods: Lists Kubernetes pods in the current cluster.
+</code></pre></div>
+<h3 id="iam-and-permissions">IAM and Permissions:</h3>
+<div class="highlight"><pre><span></span><code>gcloud projects add-iam-policy-binding PROJECT_ID --member=USER_OR_GROUP --role=ROLE: Grants IAM permissions to a user or group on a project.
+</code></pre></div>
+<h3 id="cloud-functions">Cloud Functions:</h3>
+<div class="highlight"><pre><span></span><code>gcloud functions deploy FUNCTION_NAME --runtime RUNTIME --trigger-http: Deploys a Cloud Function.
+gcloud functions list: Lists all Cloud Functions in your project.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These are just a few examples of the many gcloud commands available for managing different Google Cloud services. You can get detailed help for any command by appending --help to it (e.g., gcloud compute instances create --help). Additionally, the GCP documentation provides comprehensive information on gcloud commands and their usage for each service.</p>
+</div></div>
             </div>
         </div>
 
